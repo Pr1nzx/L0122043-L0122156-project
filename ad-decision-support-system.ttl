@@ -4,317 +4,805 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/> .
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system> rdf:type owl:Ontology .
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system> a owl:Ontology .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/deficientB12
+
+:deficientB12 a owl:ObjectProperty .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/familyOf
+
+:familyOf a owl:ObjectProperty , owl:SymmetricProperty .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasAtrofiHippocampus
+
+:hasAtrofiHippocampus a owl:ObjectProperty .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasChanged
+
+:hasChanged a owl:ObjectProperty .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasHighPTau
+
+:hasHighPTau a owl:ObjectProperty .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasHipotiroid
+
+:hasHipotiroid a owl:ObjectProperty .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasLowABeta42
+
+:hasLowABeta42 a owl:ObjectProperty .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasUncontrolledBloodSugar
+
+:hasUncontrolledBloodSugar a owl:ObjectProperty .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/isPositive
+
+:isPositive a owl:ObjectProperty .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/notIndependent
+
+:notIndependent a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasFASTStage
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasFASTStage> a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Assay_Kit
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Assay_Kit> a owl:DatatypeProperty ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_CSF_Ab42_40_Ratio
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_CSF_Ab42_40_Ratio> a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty ;
+	rdfs:range xsd:float .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_CSF_pTau181_Value
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_CSF_pTau181_Value> a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty ;
+	rdfs:range xsd:float .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Education_Years
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Education_Years> a owl:DatatypeProperty ;
+	rdfs:range xsd:integer .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_FAST_Stage
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_FAST_Stage> a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Gender
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Gender> a owl:DatatypeProperty .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_MTA_Score
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_MTA_Score> a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty ;
+	rdfs:range xsd:float .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_MoCA_FreeRecall
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_MoCA_FreeRecall> a owl:DatatypeProperty ;
+	rdfs:range xsd:integer .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_MoCA_MIS_Score
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_MoCA_MIS_Score> a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty ;
+	rdfs:range xsd:integer .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_MoCA_Total_Score
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_MoCA_Total_Score> a owl:DatatypeProperty ;
+	rdfs:range xsd:integer .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Plasma_Ab42_40_Ratio
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Plasma_Ab42_40_Ratio> a owl:DatatypeProperty ;
+	rdfs:range xsd:float .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Recommendation
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Recommendation> a owl:DatatypeProperty ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWith
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWith> a owl:DatatypeProperty ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasAD8Score
+
+:hasAD8Score a owl:DatatypeProperty ;
+	rdfs:range xsd:integer .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasFAQScore
+
+:hasFAQScore a owl:DatatypeProperty ;
+	rdfs:range xsd:integer .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasMoCAScore
+
+:hasMoCAScore a owl:DatatypeProperty ;
+	rdfs:range xsd:integer .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/has_Age
+
+:has_Age a owl:DatatypeProperty ;
+	rdfs:range xsd:integer .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/has_MMSE_Score
+
+:has_MMSE_Score a owl:DatatypeProperty ;
+	rdfs:range xsd:integer .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.obolibrary.org/obo/OBI_0000278
+
+<http://purl.obolibrary.org/obo/OBI_0000278> a owl:Class ;
+	rdfs:label "StageDisease" .
+# 
+# http://semanticscience.org/resource/SIO_001213
+
+<http://semanticscience.org/resource/SIO_001213> a owl:Class ;
+	rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000278> ;
+	rdfs:label "mild" .
+# 
+# http://semanticscience.org/resource/SIO_001214
+
+<http://semanticscience.org/resource/SIO_001214> a owl:Class ;
+	rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000278> ;
+	rdfs:label "moderate" .
+# 
+# http://semanticscience.org/resource/SIO_001215
+
+<http://semanticscience.org/resource/SIO_001215> a owl:Class ;
+	rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000278> ;
+	rdfs:label "severe" .
+# 
+# http://www.demcare.eu/ontologies/demlab.owl#PersonWithDementia
+
+<http://www.demcare.eu/ontologies/demlab.owl#PersonWithDementia> a owl:Class ;
+	owl:equivalentClass _:genid1 .
+
+_:genid1 a owl:Restriction ;
+	owl:onProperty :notIndependent ;
+	owl:someValuesFrom :InstrumentalActivitiesOfDailyLiving .
+
+<http://www.demcare.eu/ontologies/demlab.owl#PersonWithDementia> rdfs:subClassOf <http://www.demcare.eu/ontologies/demlab.owl#PersonWithPredementia> .
+# 
+# http://www.demcare.eu/ontologies/demlab.owl#PersonWithPredementia
 
-#################################################################
-#    Object Properties
-#################################################################
+<http://www.demcare.eu/ontologies/demlab.owl#PersonWithPredementia> a owl:Class ;
+	rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Age_Group_65_to_75
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#deficientB12
-:deficientB12 rdf:type owl:ObjectProperty .
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Age_Group_65_to_75> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Demographic_Cohort> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Age_Group_Over_75
 
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Age_Group_Over_75> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Demographic_Cohort> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Age_Group_Under_65
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#familyOf
-:familyOf rdf:type owl:ObjectProperty ,
-                   owl:SymmetricProperty .
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Age_Group_Under_65> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Demographic_Cohort> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Amyloid_Positive
 
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Amyloid_Positive> a owl:Class ;
+	owl:equivalentClass _:genid2 .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAtrofiHippocampus
-:hasAtrofiHippocampus rdf:type owl:ObjectProperty .
+_:genid2 owl:intersectionOf _:genid32 .
 
+_:genid32 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Patient> ;
+	rdf:rest _:genid3 .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasChanged
-:hasChanged rdf:type owl:ObjectProperty .
+_:genid3 a rdf:List ;
+	rdf:first _:genid4 .
 
+_:genid4 a owl:Class ;
+	owl:unionOf _:genid23 .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasHighPTau
-:hasHighPTau rdf:type owl:ObjectProperty .
+_:genid23 a rdf:List ;
+	rdf:first _:genid24 .
 
+_:genid24 owl:intersectionOf _:genid27 .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasHipotiroid
-:hasHipotiroid rdf:type owl:ObjectProperty .
+_:genid27 a rdf:List ;
+	rdf:first _:genid28 .
 
+_:genid28 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_CSF_Ab42_40_Ratio> ;
+	owl:someValuesFrom _:genid29 .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasLowABeta42
-:hasLowABeta42 rdf:type owl:ObjectProperty .
+_:genid29 a rdfs:Datatype ;
+	owl:onDatatype xsd:float ;
+	owl:withRestrictions _:genid30 .
 
+_:genid30 a rdf:List ;
+	rdf:first _:genid31 .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasUncontrolledBloodSugar
-:hasUncontrolledBloodSugar rdf:type owl:ObjectProperty .
+_:genid31 xsd:maxInclusive "492.67"^^xsd:float .
 
+_:genid30 rdf:rest rdf:nil .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#isPositive
-:isPositive rdf:type owl:ObjectProperty .
+_:genid27 rdf:rest _:genid25 .
 
+_:genid25 a rdf:List ;
+	rdf:first _:genid26 .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#notIndependent
-:notIndependent rdf:type owl:ObjectProperty .
+_:genid26 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Assay_Kit> ;
+	owl:hasValue "Innotest" .
 
+_:genid25 rdf:rest rdf:nil .
 
-#################################################################
-#    Data properties
-#################################################################
+_:genid24 a owl:Class .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAD8Score
-:hasAD8Score rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:integer .
+_:genid23 rdf:rest _:genid14 .
 
+_:genid14 a rdf:List ;
+	rdf:first _:genid15 .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAge
-:hasAge rdf:type owl:DatatypeProperty ;
-        rdfs:range xsd:integer .
+_:genid15 owl:intersectionOf _:genid18 .
 
+_:genid18 a rdf:List ;
+	rdf:first _:genid19 .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasFAQScore
-:hasFAQScore rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:integer .
+_:genid19 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_CSF_Ab42_40_Ratio> ;
+	owl:someValuesFrom _:genid20 .
 
+_:genid20 a rdfs:Datatype ;
+	owl:onDatatype xsd:float ;
+	owl:withRestrictions _:genid21 .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMMSEScore
-:hasMMSEScore rdf:type owl:DatatypeProperty ;
-              rdfs:range xsd:integer .
+_:genid21 a rdf:List ;
+	rdf:first _:genid22 .
 
+_:genid22 xsd:maxInclusive "750.0"^^xsd:float .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMoCAScore
-:hasMoCAScore rdf:type owl:DatatypeProperty ;
-              rdfs:range xsd:integer .
+_:genid21 rdf:rest rdf:nil .
 
+_:genid18 rdf:rest _:genid16 .
 
-#################################################################
-#    Classes
-#################################################################
+_:genid16 a rdf:List ;
+	rdf:first _:genid17 .
 
-###  http://purl.obolibrary.org/obo/OBI_0000278
-<http://purl.obolibrary.org/obo/OBI_0000278> rdf:type owl:Class ;
-                                             rdfs:label "StageDisease" .
+_:genid17 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Assay_Kit> ;
+	owl:hasValue "Lumipulse" .
 
+_:genid16 rdf:rest rdf:nil .
 
-###  http://semanticscience.org/resource/SIO_001213
-<http://semanticscience.org/resource/SIO_001213> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000278> ;
-                                                 rdfs:label "mild" .
+_:genid15 a owl:Class .
 
+_:genid14 rdf:rest _:genid5 .
 
-###  http://semanticscience.org/resource/SIO_001214
-<http://semanticscience.org/resource/SIO_001214> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000278> ;
-                                                 rdfs:label "moderate" .
+_:genid5 a rdf:List ;
+	rdf:first _:genid6 .
 
+_:genid6 owl:intersectionOf _:genid9 .
 
-###  http://semanticscience.org/resource/SIO_001215
-<http://semanticscience.org/resource/SIO_001215> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000278> ;
-                                                 rdfs:label "severe" .
-
-
-###  http://www.demcare.eu/ontologies/demlab.owl#PersonWithDementia
-<http://www.demcare.eu/ontologies/demlab.owl#PersonWithDementia> rdf:type owl:Class ;
-                                                                 owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                       owl:onProperty :notIndependent ;
-                                                                                       owl:someValuesFrom :InstrumentalActivitiesOfDailyLiving
-                                                                                     ] ;
-                                                                 rdfs:subClassOf <http://www.demcare.eu/ontologies/demlab.owl#PersonWithPredementia> .
-
-
-###  http://www.demcare.eu/ontologies/demlab.owl#PersonWithPredementia
-<http://www.demcare.eu/ontologies/demlab.owl#PersonWithPredementia> rdf:type owl:Class ;
-                                                                    owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Class ;
-                                                                                                                 owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                                                                                 owl:onProperty :familyOf ;
-                                                                                                                                 owl:someValuesFrom <https://w3id.org/sbeo#AlzheimersDiseasedPerson>
-                                                                                                                               ]
-                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                 owl:onProperty :hasChanged ;
-                                                                                                                                 owl:someValuesFrom :Behaviour
-                                                                                                                               ]
-                                                                                                                             )
-                                                                                                               ]
-                                                                                                               [ rdf:type owl:Class ;
-                                                                                                                 owl:complementOf :NotAlzheimerSuspect
-                                                                                                               ]
-                                                                                                             ) ;
-                                                                                          rdf:type owl:Class
-                                                                                        ] ,
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty :hasFAQScore ;
-                                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                               owl:onDatatype xsd:integer ;
-                                                                                                               owl:withRestrictions ( [ xsd:minExclusive 9
-                                                                                                                                      ]
-                                                                                                                                    )
-                                                                                                             ]
-                                                                                        ] ,
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty :hasMMSEScore ;
-                                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                               owl:onDatatype xsd:integer ;
-                                                                                                               owl:withRestrictions ( [ xsd:maxExclusive 24
-                                                                                                                                      ]
-                                                                                                                                    )
-                                                                                                             ]
-                                                                                        ] ,
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty :hasMoCAScore ;
-                                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                               owl:onDatatype xsd:integer ;
-                                                                                                               owl:withRestrictions ( [ xsd:maxExclusive 26
-                                                                                                                                      ]
-                                                                                                                                    )
-                                                                                                             ]
-                                                                                        ] ;
-                                                                    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
-
+_:genid9 a rdf:List ;
+	rdf:first _:genid10 .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Behaviour
-:Behaviour rdf:type owl:Class ;
-           rdfs:subClassOf :MedicalHistory ;
-           owl:disjointWith <https://w3id.org/sbeo#AlzheimersDiseasedPerson> .
+_:genid10 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_CSF_Ab42_40_Ratio> ;
+	owl:someValuesFrom _:genid11 .
 
+_:genid11 a rdfs:Datatype ;
+	owl:onDatatype xsd:float ;
+	owl:withRestrictions _:genid12 .
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#BloodTest
-:BloodTest rdf:type owl:Class ;
-           rdfs:subClassOf :ClinicalTest .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#BrainImaging
-:BrainImaging rdf:type owl:Class ;
-              rdfs:subClassOf :ClinicalTest .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CSF
-:CSF rdf:type owl:Class ;
-     rdfs:subClassOf :BrainImaging .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CT
-:CT rdf:type owl:Class ;
-    rdfs:subClassOf :BrainImaging .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ClinicalTest
-:ClinicalTest rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#FAQ
-:FAQ rdf:type owl:Class ;
-     rdfs:subClassOf :MedicalHistory .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#InstrumentalActivitiesOfDailyLiving
-:InstrumentalActivitiesOfDailyLiving rdf:type owl:Class ;
-                                     rdfs:subClassOf :Behaviour .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#MMSE
-:MMSE rdf:type owl:Class ;
-      rdfs:subClassOf :MedicalHistory .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#MRI
-:MRI rdf:type owl:Class ;
-     rdfs:subClassOf :BrainImaging .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#MedicalHistory
-:MedicalHistory rdf:type owl:Class ;
-                rdfs:subClassOf :ClinicalTest .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#MentalStatusTest
-:MentalStatusTest rdf:type owl:Class ;
-                  rdfs:subClassOf :ClinicalTest .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#MoCA
-:MoCA rdf:type owl:Class ;
-      rdfs:subClassOf :MedicalHistory .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#NeurogicalExams
-:NeurogicalExams rdf:type owl:Class ;
-                 rdfs:subClassOf :ClinicalTest .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#NotAlzheimerSuspect
-:NotAlzheimerSuspect rdf:type owl:Class ;
-                     owl:equivalentClass [ rdf:type owl:Restriction ;
-                                           owl:onProperty :deficientB12 ;
-                                           owl:someValuesFrom :BloodTest
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty :hasHipotiroid ;
-                                           owl:someValuesFrom <http://xmlns.com/foaf/0.1/Person>
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty :hasUncontrolledBloodSugar ;
-                                           owl:someValuesFrom <http://xmlns.com/foaf/0.1/Person>
-                                         ] .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PET
-:PET rdf:type owl:Class ;
-     rdfs:subClassOf :BrainImaging .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PhysicalTest
-:PhysicalTest rdf:type owl:Class ;
-              rdfs:subClassOf :ClinicalTest .
-
-
-###  http://xmlns.com/foaf/0.1/Person
-<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
-
-
-###  https://w3id.org/sbeo#AlzheimersDiseasedPerson
-<https://w3id.org/sbeo#AlzheimersDiseasedPerson> rdf:type owl:Class ;
-                                                 owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Class ;
-                                                                                              owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                                                                     owl:onProperty :hasHighPTau ;
-                                                                                                                                     owl:someValuesFrom :CSF
-                                                                                                                                   ]
-                                                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                                                     owl:onProperty :hasLowABeta42 ;
-                                                                                                                                     owl:someValuesFrom :CSF
-                                                                                                                                   ]
-                                                                                                                                 ) ;
-                                                                                                              rdf:type owl:Class
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty :isPositive ;
-                                                                                                              owl:someValuesFrom :PET
-                                                                                                            ]
-                                                                                                          )
-                                                                                            ]
-                                                                                            [ rdf:type owl:Restriction ;
-                                                                                              owl:onProperty :hasAtrofiHippocampus ;
-                                                                                              owl:someValuesFrom :MRI
-                                                                                            ]
-                                                                                          ) ;
-                                                                       rdf:type owl:Class
-                                                                     ] ;
-                                                 rdfs:subClassOf <http://www.demcare.eu/ontologies/demlab.owl#PersonWithDementia> .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Supri
-:Supri rdf:type owl:NamedIndividual ,
-                <https://w3id.org/sbeo#AlzheimersDiseasedPerson> .
-
-
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Wisnu
-:Wisnu rdf:type owl:NamedIndividual ,
-                [ rdf:type owl:Restriction ;
-                  owl:onProperty :notIndependent ;
-                  owl:someValuesFrom :InstrumentalActivitiesOfDailyLiving
-                ] ;
-       :familyOf :Supri ;
-       :hasAge 65 ;
-       :hasMMSEScore 15 .
-
-
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+_:genid12 a rdf:List ;
+	rdf:first _:genid13 .
+
+_:genid13 xsd:maxInclusive "759.0"^^xsd:float .
+
+_:genid12 rdf:rest rdf:nil .
+
+_:genid9 rdf:rest _:genid7 .
+
+_:genid7 a rdf:List ;
+	rdf:first _:genid8 .
+
+_:genid8 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Assay_Kit> ;
+	owl:hasValue "Euroimmun" .
+
+_:genid7 rdf:rest rdf:nil .
+
+_:genid6 a owl:Class .
+
+_:genid5 rdf:rest rdf:nil .
+
+_:genid3 rdf:rest rdf:nil .
+
+_:genid2 a owl:Class .
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Amyloid_Positive> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Pathology_Status> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CSF_Analysis
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CSF_Analysis> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#FluidBiomarker> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CT_Scan
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CT_Scan> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Neuroimaging> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ClinicalOutput
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ClinicalOutput> a owl:Class .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CognitiveAssessment
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CognitiveAssessment> a owl:Class ;
+	rdfs:subClassOf :DiagnosticInvestigation .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Demographic_Cohort
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Demographic_Cohort> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Disease_Stage
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Disease_Stage> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ClinicalOutput> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Education_Level
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Education_Level> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Demographic_Cohort> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#FluidBiomarker
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#FluidBiomarker> a owl:Class ;
+	rdfs:subClassOf :DiagnosticInvestigation .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Functional_Assesment
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Functional_Assesment> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CognitiveAssessment> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#GLobal_screening
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#GLobal_screening> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CognitiveAssessment> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#MCI_Stage
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#MCI_Stage> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Disease_Stage> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Memory_Specific
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Memory_Specific> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CognitiveAssessment> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Mild_Dementia
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Mild_Dementia> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Disease_Stage> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Moderate_Dementia
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Moderate_Dementia> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Disease_Stage> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Molecular_PET
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Molecular_PET> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Neuroimaging> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Neurodegeneration_Present
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Neurodegeneration_Present> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Pathology_Status> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Neuroimaging
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Neuroimaging> a owl:Class ;
+	rdfs:subClassOf :DiagnosticInvestigation .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Pathology_Status
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Pathology_Status> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ClinicalOutput> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Patient
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Patient> a owl:Class .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> a owl:Class .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Plasma_Analysis
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Plasma_Analysis> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#FluidBiomarker> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Severe_Dementia
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Severe_Dementia> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Disease_Stage> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Structural_MRI
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Structural_MRI> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Neuroimaging> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Tau_Positive
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Tau_Positive> a owl:Class ;
+	owl:equivalentClass _:genid33 .
+
+_:genid33 owl:intersectionOf _:genid63 .
+
+_:genid63 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Patient> ;
+	rdf:rest _:genid34 .
+
+_:genid34 a rdf:List ;
+	rdf:first _:genid35 .
+
+_:genid35 a owl:Class ;
+	owl:unionOf _:genid54 .
+
+_:genid54 a rdf:List ;
+	rdf:first _:genid55 .
+
+_:genid55 owl:intersectionOf _:genid58 .
+
+_:genid58 a rdf:List ;
+	rdf:first _:genid59 .
+
+_:genid59 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_CSF_pTau181_Value> ;
+	owl:someValuesFrom _:genid60 .
+
+_:genid60 a rdfs:Datatype ;
+	owl:onDatatype xsd:float ;
+	owl:withRestrictions _:genid61 .
+
+_:genid61 a rdf:List ;
+	rdf:first _:genid62 .
+
+_:genid62 xsd:minInclusive "50.0"^^xsd:float .
+
+_:genid61 rdf:rest rdf:nil .
+
+_:genid58 rdf:rest _:genid56 .
+
+_:genid56 a rdf:List ;
+	rdf:first _:genid57 .
+
+_:genid57 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Assay_Kit> ;
+	owl:hasValue "Euroimmun" .
+
+_:genid56 rdf:rest rdf:nil .
+
+_:genid55 a owl:Class .
+
+_:genid54 rdf:rest _:genid45 .
+
+_:genid45 a rdf:List ;
+	rdf:first _:genid46 .
+
+_:genid46 owl:intersectionOf _:genid49 .
+
+_:genid49 a rdf:List ;
+	rdf:first _:genid50 .
+
+_:genid50 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_CSF_pTau181_Value> ;
+	owl:someValuesFrom _:genid51 .
+
+_:genid51 a rdfs:Datatype ;
+	owl:onDatatype xsd:float ;
+	owl:withRestrictions _:genid52 .
+
+_:genid52 a rdf:List ;
+	rdf:first _:genid53 .
+
+_:genid53 xsd:minInclusive "57.0"^^xsd:float .
+
+_:genid52 rdf:rest rdf:nil .
+
+_:genid49 rdf:rest _:genid47 .
+
+_:genid47 a rdf:List ;
+	rdf:first _:genid48 .
+
+_:genid48 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Assay_Kit> ;
+	owl:hasValue "Innotest" .
+
+_:genid47 rdf:rest rdf:nil .
+
+_:genid46 a owl:Class .
+
+_:genid45 rdf:rest _:genid36 .
+
+_:genid36 a rdf:List ;
+	rdf:first _:genid37 .
+
+_:genid37 owl:intersectionOf _:genid40 .
+
+_:genid40 a rdf:List ;
+	rdf:first _:genid41 .
+
+_:genid41 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_CSF_pTau181_Value> ;
+	owl:someValuesFrom _:genid42 .
+
+_:genid42 a rdfs:Datatype ;
+	owl:onDatatype xsd:float ;
+	owl:withRestrictions _:genid43 .
+
+_:genid43 a rdf:List ;
+	rdf:first _:genid44 .
+
+_:genid44 xsd:minInclusive "69.9"^^xsd:float .
+
+_:genid43 rdf:rest rdf:nil .
+
+_:genid40 rdf:rest _:genid38 .
+
+_:genid38 a rdf:List ;
+	rdf:first _:genid39 .
+
+_:genid39 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Assay_Kit> ;
+	owl:hasValue "Lumipulse" .
+
+_:genid38 rdf:rest rdf:nil .
+
+_:genid37 a owl:Class .
+
+_:genid36 rdf:rest rdf:nil .
+
+_:genid34 rdf:rest rdf:nil .
+
+_:genid33 a owl:Class .
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Tau_Positive> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Pathology_Status> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/Behaviour
+
+:Behaviour a owl:Class ;
+	rdfs:subClassOf :MedicalHistory ;
+	owl:disjointWith <https://w3id.org/sbeo#AlzheimersDiseasedPerson> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/BloodTest
+
+:BloodTest a owl:Class ;
+	rdfs:subClassOf :DiagnosticInvestigation .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/BrainImaging
+
+:BrainImaging a owl:Class ;
+	rdfs:subClassOf :DiagnosticInvestigation .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/CSF
+
+:CSF a owl:Class ;
+	rdfs:subClassOf :BrainImaging .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/CT
+
+:CT a owl:Class ;
+	rdfs:subClassOf :BrainImaging .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/DiagnosticInvestigation
+
+:DiagnosticInvestigation a owl:Class .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/FAQ
+
+:FAQ a owl:Class ;
+	rdfs:subClassOf :MedicalHistory .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/InstrumentalActivitiesOfDailyLiving
+
+:InstrumentalActivitiesOfDailyLiving a owl:Class ;
+	rdfs:subClassOf :Behaviour .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/MMSE
+
+:MMSE a owl:Class ;
+	rdfs:subClassOf :MedicalHistory .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/MRI
+
+:MRI a owl:Class ;
+	rdfs:subClassOf :BrainImaging .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/MedicalHistory
+
+:MedicalHistory a owl:Class ;
+	rdfs:subClassOf :DiagnosticInvestigation .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/MentalStatusTest
+
+:MentalStatusTest a owl:Class ;
+	rdfs:subClassOf :DiagnosticInvestigation .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/MoCA
+
+:MoCA a owl:Class ;
+	rdfs:subClassOf :MedicalHistory .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/NeurogicalExams
+
+:NeurogicalExams a owl:Class ;
+	rdfs:subClassOf :DiagnosticInvestigation .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/NotAlzheimerSuspect
+
+:NotAlzheimerSuspect a owl:Class ;
+	owl:equivalentClass _:genid64 .
+
+_:genid64 a owl:Restriction ;
+	owl:onProperty :deficientB12 ;
+	owl:someValuesFrom :BloodTest .
+
+:NotAlzheimerSuspect owl:equivalentClass _:genid65 .
+
+_:genid65 a owl:Restriction ;
+	owl:onProperty :hasHipotiroid ;
+	owl:someValuesFrom <http://xmlns.com/foaf/0.1/Person> .
+
+:NotAlzheimerSuspect owl:equivalentClass _:genid66 .
+
+_:genid66 a owl:Restriction ;
+	owl:onProperty :hasUncontrolledBloodSugar ;
+	owl:someValuesFrom <http://xmlns.com/foaf/0.1/Person> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/PET
+
+:PET a owl:Class ;
+	rdfs:subClassOf :BrainImaging .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/PhysicalTest
+
+:PhysicalTest a owl:Class ;
+	rdfs:subClassOf :DiagnosticInvestigation .
+# 
+# http://xmlns.com/foaf/0.1/Person
+
+<http://xmlns.com/foaf/0.1/Person> a owl:Class .
+# 
+# https://w3id.org/sbeo#AlzheimersDiseasedPerson
+
+<https://w3id.org/sbeo#AlzheimersDiseasedPerson> a owl:Class ;
+	owl:equivalentClass _:genid67 .
+
+_:genid67 owl:intersectionOf _:genid70 .
+
+_:genid70 a rdf:List ;
+	rdf:first _:genid71 .
+
+_:genid71 a owl:Class ;
+	owl:unionOf _:genid74 .
+
+_:genid74 a rdf:List ;
+	rdf:first _:genid75 .
+
+_:genid75 owl:intersectionOf _:genid78 .
+
+_:genid78 a rdf:List ;
+	rdf:first _:genid79 .
+
+_:genid79 a owl:Restriction ;
+	owl:onProperty :hasHighPTau ;
+	owl:someValuesFrom :CSF .
+
+_:genid78 rdf:rest _:genid76 .
+
+_:genid76 a rdf:List ;
+	rdf:first _:genid77 .
+
+_:genid77 a owl:Restriction ;
+	owl:onProperty :hasLowABeta42 ;
+	owl:someValuesFrom :CSF .
+
+_:genid76 rdf:rest rdf:nil .
+
+_:genid75 a owl:Class .
+
+_:genid74 rdf:rest _:genid72 .
+
+_:genid72 a rdf:List ;
+	rdf:first _:genid73 .
+
+_:genid73 a owl:Restriction ;
+	owl:onProperty :isPositive ;
+	owl:someValuesFrom :PET .
+
+_:genid72 rdf:rest rdf:nil .
+
+_:genid70 rdf:rest _:genid68 .
+
+_:genid68 a rdf:List ;
+	rdf:first _:genid69 .
+
+_:genid69 a owl:Restriction ;
+	owl:onProperty :hasAtrofiHippocampus ;
+	owl:someValuesFrom :MRI .
+
+_:genid68 rdf:rest rdf:nil .
+
+_:genid67 a owl:Class .
+
+<https://w3id.org/sbeo#AlzheimersDiseasedPerson> rdfs:subClassOf <http://www.demcare.eu/ontologies/demlab.owl#PersonWithDementia> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/Supri
+
+:Supri a owl:NamedIndividual , <https://w3id.org/sbeo#AlzheimersDiseasedPerson> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/Wisnu
+
+:Wisnu a owl:NamedIndividual , _:genid80 .
+
+_:genid80 a owl:Restriction ;
+	owl:onProperty :notIndependent ;
+	owl:someValuesFrom :InstrumentalActivitiesOfDailyLiving .
+
+:Wisnu :familyOf :Supri ;
+	:has_Age "65"^^xsd:integer ;
+	:has_MMSE_Score "15"^^xsd:integer .
+# 
+# Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi

@@ -15,12 +15,6 @@
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#TestedWithPlatform
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#TestedWithPlatform> a owl:ObjectProperty ;
-	rdfs:domain <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#FluidBiomarkerAnalysis> ;
-	rdfs:range <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#AssayKit> .
-# 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAmyloidStatus
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAmyloidStatus> a owl:ObjectProperty ;
@@ -46,7 +40,7 @@
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasUndergoneTest
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasUndergoneTest> a owl:ObjectProperty ;
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasUndergoneTest> a owl:ObjectProperty , owl:InverseFunctionalProperty ;
 	rdfs:domain _:genid1 .
 
 _:genid1 owl:intersectionOf _:genid3 .
@@ -73,9 +67,11 @@ _:genid1 a owl:Class .
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWithKit> a owl:ObjectProperty .
 # 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/deficientB12
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWithPlatform
 
-:deficientB12 a owl:ObjectProperty .
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWithPlatform> a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:domain <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#FluidBiomarkerAnalysis> ;
+	rdfs:range <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#AssayKit> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/familyOf
 
@@ -137,11 +133,6 @@ _:genid1 a owl:Class .
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAbeta42ToPTauRatio> a owl:DatatypeProperty ;
 	rdfs:range xsd:double .
 # 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasFASTStage
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasFASTStage> a owl:DatatypeProperty ;
-	rdfs:subPropertyOf owl:topDataProperty .
-# 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMMSEDelayedRecall
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMMSEDelayedRecall> a owl:DatatypeProperty ;
@@ -156,21 +147,6 @@ _:genid1 a owl:Class .
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMTAAverageScore
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMTAAverageScore> a owl:DatatypeProperty ;
-	rdfs:range xsd:double .
-# 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMTA_Average
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMTA_Average> a owl:DatatypeProperty ;
-	rdfs:range xsd:double .
-# 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMTA_Left
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMTA_Left> a owl:DatatypeProperty ;
-	rdfs:range xsd:double .
-# 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMTA_Right
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMTA_Right> a owl:DatatypeProperty ;
 	rdfs:range xsd:double .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMoCADelayedRecall
@@ -227,11 +203,6 @@ _:genid1 a owl:Class .
 	rdfs:subPropertyOf owl:topDataProperty ;
 	rdfs:range xsd:double .
 # 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Assay_Kit
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#has_Assay_Kit> a owl:DatatypeProperty ;
-	rdfs:range xsd:string .
-# 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#inputMTAScoreLeft
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#inputMTAScoreLeft> a owl:DatatypeProperty .
@@ -244,24 +215,9 @@ _:genid1 a owl:Class .
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#inputPAScore> a owl:DatatypeProperty .
 # 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWith
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWith> a owl:DatatypeProperty ;
-	rdfs:range xsd:string .
-# 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#yearsOfEducation
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#yearsOfEducation> a owl:DatatypeProperty ;
-	rdfs:range xsd:integer .
-# 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasAD8Score
-
-:hasAD8Score a owl:DatatypeProperty ;
-	rdfs:range xsd:integer .
-# 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasFAQScore
-
-:hasFAQScore a owl:DatatypeProperty ;
 	rdfs:range xsd:integer .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasMoCAScore
@@ -373,8 +329,7 @@ _:genid4 a owl:Class .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#BiomarkerStatus
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#BiomarkerStatus> a owl:Class ;
-	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ClinicalFinding> .
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#BiomarkerStatus> a owl:Class .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CSFAnalysis
 
@@ -690,15 +645,15 @@ _:genid67 a owl:Class .
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAbnormalPA_Under60> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedImagingStatus> .
 # 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositiveInnotest
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositive
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositiveInnotest> a owl:Class ;
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositive> a owl:Class ;
 	owl:equivalentClass _:genid79 .
 
 _:genid79 owl:intersectionOf _:genid91 .
 
 _:genid91 a rdf:List ;
-	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Patient> ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> ;
 	rdf:rest _:genid85 .
 
 _:genid85 a rdf:List ;
@@ -711,15 +666,15 @@ _:genid86 a owl:Restriction ;
 _:genid87 owl:intersectionOf _:genid90 .
 
 _:genid90 a rdf:List ;
-	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CSFAnalysis> ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PlasmaAnalysis> ;
 	rdf:rest _:genid88 .
 
 _:genid88 a rdf:List ;
 	rdf:first _:genid89 .
 
 _:genid89 a owl:Restriction ;
-	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWithKit> ;
-	owl:hasValue <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#InnotestKit> .
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWithPlatform> ;
+	owl:hasValue <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#LumipulsePlatform> .
 
 _:genid88 rdf:rest rdf:nil .
 
@@ -731,7 +686,7 @@ _:genid80 a rdf:List ;
 	rdf:first _:genid81 .
 
 _:genid81 a owl:Restriction ;
-	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAbeta42Level> ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasPlasmaAbeta42Ratio40> ;
 	owl:someValuesFrom _:genid82 .
 
 _:genid82 a rdfs:Datatype ;
@@ -741,7 +696,7 @@ _:genid82 a rdfs:Datatype ;
 _:genid83 a rdf:List ;
 	rdf:first _:genid84 .
 
-_:genid84 xsd:maxExclusive "492.67"^^xsd:double .
+_:genid84 xsd:maxInclusive "0.078"^^xsd:double .
 
 _:genid83 rdf:rest rdf:nil .
 
@@ -749,18 +704,12 @@ _:genid80 rdf:rest rdf:nil .
 
 _:genid79 a owl:Class .
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositiveInnotest> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> ;
-	owl:disjointWith <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositiveLumipulse> .
-# 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositiveLumipulse
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositiveLumipulse> a owl:Class ;
-	owl:equivalentClass _:genid92 .
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositive> owl:equivalentClass _:genid92 .
 
 _:genid92 owl:intersectionOf _:genid104 .
 
 _:genid104 a rdf:List ;
-	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Patient> ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> ;
 	rdf:rest _:genid98 .
 
 _:genid98 a rdf:List ;
@@ -780,8 +729,8 @@ _:genid101 a rdf:List ;
 	rdf:first _:genid102 .
 
 _:genid102 a owl:Restriction ;
-	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWithKit> ;
-	owl:hasValue <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#LumipulsePlatform> .
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWithPlatform> ;
+	owl:hasValue <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SimoaPlatform> .
 
 _:genid101 rdf:rest rdf:nil .
 
@@ -803,7 +752,7 @@ _:genid95 a rdfs:Datatype ;
 _:genid96 a rdf:List ;
 	rdf:first _:genid97 .
 
-_:genid97 xsd:maxInclusive "0.078"^^xsd:double .
+_:genid97 xsd:maxInclusive "0.0472"^^xsd:double .
 
 _:genid96 rdf:rest rdf:nil .
 
@@ -811,11 +760,17 @@ _:genid93 rdf:rest rdf:nil .
 
 _:genid92 a owl:Class .
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositiveLumipulse> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> .
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositive> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarker> .
 # 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositivePlasmaLumipulse
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositiveInnotest
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositivePlasmaLumipulse> a owl:Class ;
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositiveInnotest> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> ;
+	owl:disjointWith <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositiveLumipulse> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositiveLumipulse
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositiveLumipulse> a owl:Class ;
 	owl:equivalentClass _:genid105 .
 
 _:genid105 owl:intersectionOf _:genid117 .
@@ -872,11 +827,11 @@ _:genid106 rdf:rest rdf:nil .
 
 _:genid105 a owl:Class .
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositivePlasmaLumipulse> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> .
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositiveLumipulse> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> .
 # 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositivePlasmaSimoa
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositivePlasmaLumipulse
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositivePlasmaSimoa> a owl:Class ;
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositivePlasmaLumipulse> a owl:Class ;
 	owl:equivalentClass _:genid118 .
 
 _:genid118 owl:intersectionOf _:genid130 .
@@ -903,7 +858,7 @@ _:genid127 a rdf:List ;
 
 _:genid128 a owl:Restriction ;
 	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWithKit> ;
-	owl:hasValue <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SimoaPlatform> .
+	owl:hasValue <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#LumipulsePlatform> .
 
 _:genid127 rdf:rest rdf:nil .
 
@@ -925,7 +880,7 @@ _:genid121 a rdfs:Datatype ;
 _:genid122 a rdf:List ;
 	rdf:first _:genid123 .
 
-_:genid123 xsd:maxInclusive "0.0472"^^xsd:double .
+_:genid123 xsd:maxInclusive "0.078"^^xsd:double .
 
 _:genid122 rdf:rest rdf:nil .
 
@@ -933,21 +888,11 @@ _:genid119 rdf:rest rdf:nil .
 
 _:genid118 a owl:Class .
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositivePlasmaSimoa> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> .
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositivePlasmaLumipulse> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> .
 # 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositivePlasmaSimoa
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> a owl:Class ;
-	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedDiagnosis> .
-# 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedDiagnosis
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedDiagnosis> a owl:Class ;
-	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedDiagnosis> .
-# 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedHighRiskRatioInnotest
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedHighRiskRatioInnotest> a owl:Class ;
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositivePlasmaSimoa> a owl:Class ;
 	owl:equivalentClass _:genid131 .
 
 _:genid131 owl:intersectionOf _:genid143 .
@@ -966,7 +911,7 @@ _:genid138 a owl:Restriction ;
 _:genid139 owl:intersectionOf _:genid142 .
 
 _:genid142 a rdf:List ;
-	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CSFAnalysis> ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PlasmaAnalysis> ;
 	rdf:rest _:genid140 .
 
 _:genid140 a rdf:List ;
@@ -974,7 +919,7 @@ _:genid140 a rdf:List ;
 
 _:genid141 a owl:Restriction ;
 	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWithKit> ;
-	owl:hasValue <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#InnotestKit> .
+	owl:hasValue <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SimoaPlatform> .
 
 _:genid140 rdf:rest rdf:nil .
 
@@ -986,7 +931,7 @@ _:genid132 a rdf:List ;
 	rdf:first _:genid133 .
 
 _:genid133 a owl:Restriction ;
-	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasPTauToAbeta42Ratio> ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasPlasmaAbeta42Ratio40> ;
 	owl:someValuesFrom _:genid134 .
 
 _:genid134 a rdfs:Datatype ;
@@ -996,7 +941,7 @@ _:genid134 a rdfs:Datatype ;
 _:genid135 a rdf:List ;
 	rdf:first _:genid136 .
 
-_:genid136 xsd:minExclusive "0.057"^^xsd:double .
+_:genid136 xsd:maxInclusive "0.0472"^^xsd:double .
 
 _:genid135 rdf:rest rdf:nil .
 
@@ -1004,69 +949,38 @@ _:genid132 rdf:rest rdf:nil .
 
 _:genid131 a owl:Class .
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedHighRiskRatioInnotest> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> ;
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedAmyloidPositivePlasmaSimoa> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarker
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarker> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedDiagnosis> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedDiagnosis> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedDiagnosis
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedDiagnosis> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedDiagnosis> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedHighRiskRatioInnotest
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedHighRiskRatioInnotest> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> ;
 	owl:disjointWith <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedHighRiskRatioLumipulse> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedHighRiskRatioLumipulse
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedHighRiskRatioLumipulse> a owl:Class ;
-	owl:equivalentClass _:genid144 .
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedImaging
 
-_:genid144 owl:intersectionOf _:genid156 .
-
-_:genid156 a rdf:List ;
-	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Patient> ;
-	rdf:rest _:genid150 .
-
-_:genid150 a rdf:List ;
-	rdf:first _:genid151 .
-
-_:genid151 a owl:Restriction ;
-	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasUndergoneTest> ;
-	owl:someValuesFrom _:genid152 .
-
-_:genid152 owl:intersectionOf _:genid155 .
-
-_:genid155 a rdf:List ;
-	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CSFAnalysis> ;
-	rdf:rest _:genid153 .
-
-_:genid153 a rdf:List ;
-	rdf:first _:genid154 .
-
-_:genid154 a owl:Restriction ;
-	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWithKit> ;
-	owl:hasValue <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#LumipulseKit> .
-
-_:genid153 rdf:rest rdf:nil .
-
-_:genid152 a owl:Class .
-
-_:genid150 rdf:rest _:genid145 .
-
-_:genid145 a rdf:List ;
-	rdf:first _:genid146 .
-
-_:genid146 a owl:Restriction ;
-	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAbeta42ToPTauRatio> ;
-	owl:someValuesFrom _:genid147 .
-
-_:genid147 a rdfs:Datatype ;
-	owl:onDatatype xsd:double ;
-	owl:withRestrictions _:genid148 .
-
-_:genid148 a rdf:List ;
-	rdf:first _:genid149 .
-
-_:genid149 xsd:maxExclusive "10.25"^^xsd:double .
-
-_:genid148 rdf:rest rdf:nil .
-
-_:genid145 rdf:rest rdf:nil .
-
-_:genid144 a owl:Class .
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedHighRiskRatioLumipulse> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> .
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedImaging> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedDiagnosis> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedImagingStatus
 
@@ -1084,128 +998,26 @@ _:genid144 a owl:Class .
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedNeurodegenerationPositiveLumipulse> a owl:Class ;
 	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> .
 # 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedTauPositive
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedTauPositive> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarker> .
+# 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedTauPositiveInnotest
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedTauPositiveInnotest> a owl:Class ;
-	owl:equivalentClass _:genid157 .
-
-_:genid157 owl:intersectionOf _:genid169 .
-
-_:genid169 a rdf:List ;
-	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Patient> ;
-	rdf:rest _:genid163 .
-
-_:genid163 a rdf:List ;
-	rdf:first _:genid164 .
-
-_:genid164 a owl:Restriction ;
-	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasUndergoneTest> ;
-	owl:someValuesFrom _:genid165 .
-
-_:genid165 owl:intersectionOf _:genid168 .
-
-_:genid168 a rdf:List ;
-	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CSFAnalysis> ;
-	rdf:rest _:genid166 .
-
-_:genid166 a rdf:List ;
-	rdf:first _:genid167 .
-
-_:genid167 a owl:Restriction ;
-	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWithKit> ;
-	owl:hasValue <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#InnotestKit> .
-
-_:genid166 rdf:rest rdf:nil .
-
-_:genid165 a owl:Class .
-
-_:genid163 rdf:rest _:genid158 .
-
-_:genid158 a rdf:List ;
-	rdf:first _:genid159 .
-
-_:genid159 a owl:Restriction ;
-	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasPTau181Level> ;
-	owl:someValuesFrom _:genid160 .
-
-_:genid160 a rdfs:Datatype ;
-	owl:onDatatype xsd:double ;
-	owl:withRestrictions _:genid161 .
-
-_:genid161 a rdf:List ;
-	rdf:first _:genid162 .
-
-_:genid162 xsd:minExclusive "44.0"^^xsd:double .
-
-_:genid161 rdf:rest rdf:nil .
-
-_:genid158 rdf:rest rdf:nil .
-
-_:genid157 a owl:Class .
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedTauPositiveInnotest> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> ;
 	owl:disjointWith <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedTauPositiveLumipulse> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedTauPositiveLumipulse
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedTauPositiveLumipulse> a owl:Class ;
-	owl:equivalentClass _:genid170 .
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#DelayedRecall
 
-_:genid170 owl:intersectionOf _:genid182 .
-
-_:genid182 a rdf:List ;
-	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Patient> ;
-	rdf:rest _:genid176 .
-
-_:genid176 a rdf:List ;
-	rdf:first _:genid177 .
-
-_:genid177 a owl:Restriction ;
-	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasUndergoneTest> ;
-	owl:someValuesFrom _:genid178 .
-
-_:genid178 owl:intersectionOf _:genid181 .
-
-_:genid181 a rdf:List ;
-	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CSFAnalysis> ;
-	rdf:rest _:genid179 .
-
-_:genid179 a rdf:List ;
-	rdf:first _:genid180 .
-
-_:genid180 a owl:Restriction ;
-	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#testedWithKit> ;
-	owl:hasValue <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#LumipulseKit> .
-
-_:genid179 rdf:rest rdf:nil .
-
-_:genid178 a owl:Class .
-
-_:genid176 rdf:rest _:genid171 .
-
-_:genid171 a rdf:List ;
-	rdf:first _:genid172 .
-
-_:genid172 a owl:Restriction ;
-	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasPTau181Level> ;
-	owl:someValuesFrom _:genid173 .
-
-_:genid173 a rdfs:Datatype ;
-	owl:onDatatype xsd:double ;
-	owl:withRestrictions _:genid174 .
-
-_:genid174 a rdf:List ;
-	rdf:first _:genid175 .
-
-_:genid175 xsd:minExclusive "69.9"^^xsd:double .
-
-_:genid174 rdf:rest rdf:nil .
-
-_:genid171 rdf:rest rdf:nil .
-
-_:genid170 a owl:Class .
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedTauPositiveLumipulse> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedBiomarkerStatus> .
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#DelayedRecall> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SpecificTest> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Demographic
 
@@ -1221,14 +1033,19 @@ _:genid170 a owl:Class .
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#DiagnosticInvestigation> a owl:Class .
 # 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#DigitSpan
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#DigitSpan> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SpecificTest> .
+# 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#FluidBiomarkerAnalysis
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#FluidBiomarkerAnalysis> a owl:Class ;
 	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#DiagnosticInvestigation> .
 # 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#GlobalScreeningInstrument
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#GlobalScreening
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#GlobalScreeningInstrument> a owl:Class ;
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#GlobalScreening> a owl:Class ;
 	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CognitiveAssessment> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#HomeCareRecommendation
@@ -1248,7 +1065,271 @@ _:genid170 a owl:Class .
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ImagingResultAbnormal
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ImagingResultAbnormal> a owl:Class ;
-	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedImagingStatus> .
+	owl:equivalentClass _:genid144 .
+
+_:genid144 owl:intersectionOf _:genid155 .
+
+_:genid155 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> ;
+	rdf:rest _:genid150 .
+
+_:genid150 a rdf:List ;
+	rdf:first _:genid151 .
+
+_:genid151 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#inputMTAScoreLeft> ;
+	owl:someValuesFrom _:genid3 .
+
+_:genid3 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid153 .
+
+_:genid153 a rdf:List ;
+	rdf:first _:genid154 .
+
+_:genid154 xsd:minInclusive "1"^^xsd:integer .
+
+_:genid153 rdf:rest rdf:nil .
+
+_:genid150 rdf:rest _:genid145 .
+
+_:genid145 a rdf:List ;
+	rdf:first _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty :patientAge ;
+	owl:someValuesFrom _:genid147 .
+
+_:genid147 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid148 .
+
+_:genid148 a rdf:List ;
+	rdf:first _:genid149 .
+
+_:genid149 xsd:maxExclusive "75"^^xsd:integer .
+
+_:genid148 rdf:rest rdf:nil .
+
+_:genid145 rdf:rest rdf:nil .
+
+_:genid144 a owl:Class .
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ImagingResultAbnormal> owl:equivalentClass _:genid156 .
+
+_:genid156 owl:intersectionOf _:genid167 .
+
+_:genid167 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> ;
+	rdf:rest _:genid162 .
+
+_:genid162 a rdf:List ;
+	rdf:first _:genid163 .
+
+_:genid163 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#inputMTAScoreLeft> ;
+	owl:someValuesFrom _:genid6 .
+
+_:genid6 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid165 .
+
+_:genid165 a rdf:List ;
+	rdf:first _:genid166 .
+
+_:genid166 xsd:minInclusive "2"^^xsd:integer .
+
+_:genid165 rdf:rest rdf:nil .
+
+_:genid162 rdf:rest _:genid157 .
+
+_:genid157 a rdf:List ;
+	rdf:first _:genid8 .
+
+_:genid8 a owl:Restriction ;
+	owl:onProperty :patientAge ;
+	owl:someValuesFrom _:genid159 .
+
+_:genid159 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid160 .
+
+_:genid160 a rdf:List ;
+	rdf:first _:genid161 .
+
+_:genid161 xsd:minInclusive "75"^^xsd:integer .
+
+_:genid160 rdf:rest rdf:nil .
+
+_:genid157 rdf:rest rdf:nil .
+
+_:genid156 a owl:Class .
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ImagingResultAbnormal> owl:equivalentClass _:genid168 .
+
+_:genid168 owl:intersectionOf _:genid172 .
+
+_:genid172 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> ;
+	rdf:rest _:genid170 .
+
+_:genid170 a rdf:List ;
+	rdf:first _:genid171 .
+
+_:genid171 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#inputMTAScoreRight> ;
+	owl:someValuesFrom _:genid2 .
+
+_:genid2 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid153 .
+
+_:genid170 rdf:rest _:genid169 .
+
+_:genid169 a rdf:List ;
+	rdf:first _:genid5 .
+
+_:genid5 a owl:Restriction ;
+	owl:onProperty :patientAge ;
+	owl:someValuesFrom _:genid147 .
+
+_:genid169 rdf:rest rdf:nil .
+
+_:genid168 a owl:Class .
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ImagingResultAbnormal> owl:equivalentClass _:genid173 .
+
+_:genid173 owl:intersectionOf _:genid177 .
+
+_:genid177 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> ;
+	rdf:rest _:genid175 .
+
+_:genid175 a rdf:List ;
+	rdf:first _:genid176 .
+
+_:genid176 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#inputMTAScoreRight> ;
+	owl:someValuesFrom _:genid7 .
+
+_:genid7 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid165 .
+
+_:genid175 rdf:rest _:genid174 .
+
+_:genid174 a rdf:List ;
+	rdf:first _:genid9 .
+
+_:genid9 a owl:Restriction ;
+	owl:onProperty :patientAge ;
+	owl:someValuesFrom _:genid159 .
+
+_:genid174 rdf:rest rdf:nil .
+
+_:genid173 a owl:Class .
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ImagingResultAbnormal> owl:equivalentClass _:genid178 .
+
+_:genid178 owl:intersectionOf _:genid189 .
+
+_:genid189 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> ;
+	rdf:rest _:genid184 .
+
+_:genid184 a rdf:List ;
+	rdf:first _:genid185 .
+
+_:genid185 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#inputPAScore> ;
+	owl:someValuesFrom _:genid186 .
+
+_:genid186 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid187 .
+
+_:genid187 a rdf:List ;
+	rdf:first _:genid188 .
+
+_:genid188 xsd:minExclusive "1"^^xsd:integer .
+
+_:genid187 rdf:rest rdf:nil .
+
+_:genid184 rdf:rest _:genid179 .
+
+_:genid179 a rdf:List ;
+	rdf:first _:genid180 .
+
+_:genid180 a owl:Restriction ;
+	owl:onProperty :patientAge ;
+	owl:someValuesFrom _:genid181 .
+
+_:genid181 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid182 .
+
+_:genid182 a rdf:List ;
+	rdf:first _:genid183 .
+
+_:genid183 xsd:maxExclusive "60"^^xsd:integer .
+
+_:genid182 rdf:rest rdf:nil .
+
+_:genid179 rdf:rest rdf:nil .
+
+_:genid178 a owl:Class .
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ImagingResultAbnormal> owl:equivalentClass _:genid190 .
+
+_:genid190 owl:intersectionOf _:genid201 .
+
+_:genid201 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> ;
+	rdf:rest _:genid196 .
+
+_:genid196 a rdf:List ;
+	rdf:first _:genid197 .
+
+_:genid197 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#inputPAScore> ;
+	owl:someValuesFrom _:genid198 .
+
+_:genid198 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid199 .
+
+_:genid199 a rdf:List ;
+	rdf:first _:genid200 .
+
+_:genid200 xsd:minExclusive "2"^^xsd:integer .
+
+_:genid199 rdf:rest rdf:nil .
+
+_:genid196 rdf:rest _:genid191 .
+
+_:genid191 a rdf:List ;
+	rdf:first _:genid192 .
+
+_:genid192 a owl:Restriction ;
+	owl:onProperty :patientAge ;
+	owl:someValuesFrom _:genid193 .
+
+_:genid193 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid194 .
+
+_:genid194 a rdf:List ;
+	rdf:first _:genid195 .
+
+_:genid195 xsd:minInclusive "60"^^xsd:integer .
+
+_:genid194 rdf:rest rdf:nil .
+
+_:genid191 rdf:rest rdf:nil .
+
+_:genid190 a owl:Class .
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ImagingResultAbnormal> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ComputedImaging> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#IschemicHeartDisease
 
@@ -1263,7 +1344,7 @@ _:genid170 a owl:Class .
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#MMSEScore
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#MMSEScore> a owl:Class ;
-	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#GlobalScreeningInstrument> .
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#GlobalScreening> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#MedialTemporalLobeAtrophy
 
@@ -1288,7 +1369,7 @@ _:genid170 a owl:Class .
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#MoCAScore
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#MoCAScore> a owl:Class ;
-	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#GlobalScreeningInstrument> .
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#GlobalScreening> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#NeurodegenerationStatus
 
@@ -1328,70 +1409,135 @@ _:genid170 a owl:Class .
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SNAPPathology> a owl:Class ;
 	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PathologicalProfile> .
 # 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SpecificDomainTest
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SpecificTest
 
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SpecificDomainTest> a owl:Class ;
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SpecificTest> a owl:Class ;
 	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#CognitiveAssessment> .
+# 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StageMCI
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StageMCI> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ClinicalSyndrome> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StageMCIMoCA
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StageMCIMoCA> a owl:Class ;
-	owl:equivalentClass _:genid183 .
+	owl:equivalentClass _:genid202 .
 
-_:genid183 owl:intersectionOf _:genid194 .
+_:genid202 owl:intersectionOf _:genid213 .
 
-_:genid194 a rdf:List ;
+_:genid213 a rdf:List ;
 	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Patient> ;
-	rdf:rest _:genid189 .
+	rdf:rest _:genid208 .
 
-_:genid189 a rdf:List ;
-	rdf:first _:genid190 .
+_:genid208 a rdf:List ;
+	rdf:first _:genid209 .
 
-_:genid190 a owl:Restriction ;
+_:genid209 a owl:Restriction ;
 	owl:onProperty :hasMoCAScore ;
-	owl:someValuesFrom _:genid191 .
+	owl:someValuesFrom _:genid210 .
 
-_:genid191 a rdfs:Datatype ;
+_:genid210 a rdfs:Datatype ;
 	owl:onDatatype xsd:integer ;
-	owl:withRestrictions _:genid192 .
+	owl:withRestrictions _:genid211 .
 
-_:genid192 a rdf:List ;
-	rdf:first _:genid193 .
+_:genid211 a rdf:List ;
+	rdf:first _:genid212 .
 
-_:genid193 xsd:minInclusive "19"^^xsd:integer .
+_:genid212 xsd:minInclusive "19"^^xsd:integer .
 
-_:genid192 rdf:rest rdf:nil .
+_:genid211 rdf:rest rdf:nil .
 
-_:genid189 rdf:rest _:genid184 .
+_:genid208 rdf:rest _:genid203 .
 
-_:genid184 a rdf:List ;
-	rdf:first _:genid185 .
+_:genid203 a rdf:List ;
+	rdf:first _:genid204 .
 
-_:genid185 a owl:Restriction ;
+_:genid204 a owl:Restriction ;
 	owl:onProperty :hasMoCAScore ;
-	owl:someValuesFrom _:genid186 .
+	owl:someValuesFrom _:genid205 .
 
-_:genid186 a rdfs:Datatype ;
+_:genid205 a rdfs:Datatype ;
 	owl:onDatatype xsd:integer ;
-	owl:withRestrictions _:genid187 .
+	owl:withRestrictions _:genid206 .
 
-_:genid187 a rdf:List ;
-	rdf:first _:genid188 .
+_:genid206 a rdf:List ;
+	rdf:first _:genid207 .
 
-_:genid188 xsd:maxExclusive "23"^^xsd:integer .
+_:genid207 xsd:maxExclusive "23"^^xsd:integer .
 
-_:genid187 rdf:rest rdf:nil .
+_:genid206 rdf:rest rdf:nil .
 
-_:genid184 rdf:rest rdf:nil .
+_:genid203 rdf:rest rdf:nil .
 
-_:genid183 a owl:Class .
+_:genid202 a owl:Class .
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StageMCIMoCA> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ClinicalSyndrome> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StageMildAD
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StageMildAD> a owl:Class ;
-	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ClinicalSyndrome> .
+	owl:equivalentClass _:genid214 .
+
+_:genid214 owl:intersectionOf _:genid220 .
+
+_:genid220 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> ;
+	rdf:rest _:genid215 .
+
+_:genid215 a rdf:List ;
+	rdf:first _:genid216 .
+
+_:genid216 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMMSEScore> ;
+	owl:someValuesFrom _:genid217 .
+
+_:genid217 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid218 .
+
+_:genid218 a rdf:List ;
+	rdf:first _:genid219 .
+
+_:genid219 xsd:minInclusive "21"^^xsd:integer .
+
+_:genid218 rdf:rest rdf:nil .
+
+_:genid215 rdf:rest rdf:nil .
+
+_:genid214 a owl:Class .
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StageMildAD> owl:equivalentClass _:genid221 .
+
+_:genid221 owl:intersectionOf _:genid227 .
+
+_:genid227 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> ;
+	rdf:rest _:genid222 .
+
+_:genid222 a rdf:List ;
+	rdf:first _:genid223 .
+
+_:genid223 a owl:Restriction ;
+	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMMSEScore> ;
+	owl:someValuesFrom _:genid224 .
+
+_:genid224 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid225 .
+
+_:genid225 a rdf:List ;
+	rdf:first _:genid226 .
+
+_:genid226 xsd:maxInclusive "24"^^xsd:integer .
+
+_:genid225 rdf:rest rdf:nil .
+
+_:genid222 rdf:rest rdf:nil .
+
+_:genid221 a owl:Class .
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StageMildAD> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ClinicalSyndrome> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StageModerateAD
 
@@ -1406,55 +1552,65 @@ _:genid183 a owl:Class .
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SuspectedAmnesticAD
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SuspectedAmnesticAD> a owl:Class ;
-	owl:equivalentClass _:genid195 .
+	owl:equivalentClass _:genid228 .
 
-_:genid195 owl:intersectionOf _:genid206 .
+_:genid228 owl:intersectionOf _:genid234 .
 
-_:genid206 a rdf:List ;
-	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#Patient> ;
-	rdf:rest _:genid201 .
+_:genid234 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> ;
+	rdf:rest _:genid229 .
 
-_:genid201 a rdf:List ;
-	rdf:first _:genid202 .
+_:genid229 a rdf:List ;
+	rdf:first _:genid230 .
 
-_:genid202 a owl:Restriction ;
+_:genid230 a owl:Restriction ;
 	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMoCADelayedRecall> ;
-	owl:someValuesFrom _:genid203 .
+	owl:someValuesFrom _:genid231 .
 
-_:genid203 a rdfs:Datatype ;
+_:genid231 a rdfs:Datatype ;
 	owl:onDatatype xsd:integer ;
-	owl:withRestrictions _:genid204 .
+	owl:withRestrictions _:genid232 .
 
-_:genid204 a rdf:List ;
-	rdf:first _:genid205 .
+_:genid232 a rdf:List ;
+	rdf:first _:genid233 .
 
-_:genid205 xsd:maxInclusive "1"^^xsd:integer .
+_:genid233 xsd:maxInclusive "1"^^xsd:integer .
 
-_:genid204 rdf:rest rdf:nil .
+_:genid232 rdf:rest rdf:nil .
 
-_:genid201 rdf:rest _:genid196 .
+_:genid229 rdf:rest rdf:nil .
 
-_:genid196 a rdf:List ;
-	rdf:first _:genid197 .
+_:genid228 a owl:Class .
 
-_:genid197 a owl:Restriction ;
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SuspectedAmnesticAD> owl:equivalentClass _:genid235 .
+
+_:genid235 owl:intersectionOf _:genid241 .
+
+_:genid241 a rdf:List ;
+	rdf:first <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#PatientProfile> ;
+	rdf:rest _:genid236 .
+
+_:genid236 a rdf:List ;
+	rdf:first _:genid237 .
+
+_:genid237 a owl:Restriction ;
 	owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasMoCADigitSpan> ;
-	owl:someValuesFrom _:genid198 .
+	owl:someValuesFrom _:genid238 .
 
-_:genid198 a rdfs:Datatype ;
+_:genid238 a rdfs:Datatype ;
 	owl:onDatatype xsd:integer ;
-	owl:withRestrictions _:genid199 .
+	owl:withRestrictions _:genid239 .
 
-_:genid199 a rdf:List ;
-	rdf:first _:genid200 .
+_:genid239 a rdf:List ;
+	rdf:first _:genid240 .
 
-_:genid200 xsd:minInclusive "1"^^xsd:integer .
+_:genid240 xsd:minInclusive "4"^^xsd:integer .
 
-_:genid199 rdf:rest rdf:nil .
+_:genid239 rdf:rest rdf:nil .
 
-_:genid196 rdf:rest rdf:nil .
+_:genid236 rdf:rest rdf:nil .
 
-_:genid195 a owl:Class .
+_:genid235 a owl:Class .
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SuspectedAmnesticAD> rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#ClinicalSyndrome> .
 # 
@@ -1474,6 +1630,11 @@ _:genid195 a owl:Class .
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#TauStatus> a owl:Class ;
 	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#BiomarkerStatus> .
 # 
+# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#VisualAtrophyRating
+
+<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#VisualAtrophyRating> a owl:Class ;
+	rdfs:subClassOf <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#DiagnosticInvestigation> .
+# 
 # 
 # 
 # #################################################################
@@ -1483,17 +1644,9 @@ _:genid195 a owl:Class .
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#InnotestKit
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#InnotestKit> a owl:NamedIndividual , <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#AssayKit> .
-# 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#InnotestPlatform
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#InnotestPlatform> a owl:NamedIndividual , <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#AssayKit> .
-# 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#LumipulseKit
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#LumipulseKit> a owl:NamedIndividual , <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#AssayKit> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#LumipulsePlatform
 
@@ -1502,14 +1655,6 @@ _:genid195 a owl:Class .
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SimoaPlatform
 
 <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#SimoaPlatform> a owl:NamedIndividual , <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#AssayKit> .
-# 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StatusAmyloidNegative
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StatusAmyloidNegative> a owl:NamedIndividual , <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#AmyloidStatus> .
-# 
-# http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StatusAmyloidPositive
-
-<http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StatusAmyloidPositive> a owl:NamedIndividual , <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#AmyloidStatus> .
 # 
 # http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#StatusNegative
 

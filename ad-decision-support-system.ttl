@@ -627,6 +627,19 @@
 :NeedBiomarkersTest rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( :RecommendedAction
                                                                [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :hasChanged ;
+                                                                 owl:someValuesFrom :Behaviour
+                                                               ]
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :hasMMSEScore ;
+                                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                      owl:onDatatype xsd:integer ;
+                                                                                      owl:withRestrictions ( [ xsd:maxInclusive 24
+                                                                                                             ]
+                                                                                                           )
+                                                                                    ]
+                                                               ]
+                                                               [ rdf:type owl:Restriction ;
                                                                  owl:onProperty :hasOtherDiseases ;
                                                                  owl:someValuesFrom xsd:boolean
                                                                ]

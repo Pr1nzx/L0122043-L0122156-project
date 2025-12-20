@@ -235,244 +235,22 @@
 
 ###  http://www.demcare.eu/ontologies/demlab.owl#PersonWithNonADDementia
 <http://www.demcare.eu/ontologies/demlab.owl#PersonWithNonADDementia> rdf:type owl:Class ;
-                                                                      owl:equivalentClass [ owl:intersectionOf ( <http://xmlns.com/foaf/0.1/Person>
-                                                                                                                 [ rdf:type owl:Restriction ;
-                                                                                                                   owl:onProperty :hasClinicalTest ;
-                                                                                                                   owl:someValuesFrom :AmyloidNegative
-                                                                                                                 ]
-                                                                                                                 [ rdf:type owl:Restriction ;
-                                                                                                                   owl:onProperty :hasClinicalTest ;
-                                                                                                                   owl:someValuesFrom :NeurodegenerationPositive
-                                                                                                                 ]
-                                                                                                                 [ rdf:type owl:Restriction ;
-                                                                                                                   owl:onProperty :notIndependent ;
-                                                                                                                   owl:someValuesFrom :InstrumentalActivitiesOfDailyLiving
-                                                                                                                 ]
-                                                                                                               ) ;
-                                                                                            rdf:type owl:Class
-                                                                                          ] ;
                                                                       rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/AlzheimersContinuumPerson
 :AlzheimersContinuumPerson rdf:type owl:Class ;
-                           owl:equivalentClass [ owl:intersectionOf ( <http://xmlns.com/foaf/0.1/Person>
-                                                                      [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty :hasClinicalTest ;
-                                                                        owl:someValuesFrom :AmyloidPositive
-                                                                      ]
-                                                                    ) ;
-                                                 rdf:type owl:Class
-                                               ] ;
                            rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/AmyloidNegative
 :AmyloidNegative rdf:type owl:Class ;
-                 owl:equivalentClass [ rdf:type owl:Class ;
-                                       owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasBrainImagingWith ;
-                                                                              owl:someValuesFrom :Elecsys
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAβ42/40Score> ;
-                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                   owl:onDatatype xsd:decimal ;
-                                                                                                   owl:withRestrictions ( [ xsd:minExclusive 0.091
-                                                                                                                          ]
-                                                                                                                        )
-                                                                                                 ]
-                                                                            ]
-                                                                          ) ;
-                                                       rdf:type owl:Class
-                                                     ]
-                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasBrainImagingWith ;
-                                                                              owl:someValuesFrom :Elecsys
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasAβ42Score ;
-                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                   owl:onDatatype xsd:integer ;
-                                                                                                   owl:withRestrictions ( [ xsd:minExclusive 1089
-                                                                                                                          ]
-                                                                                                                        )
-                                                                                                 ]
-                                                                            ]
-                                                                          ) ;
-                                                       rdf:type owl:Class
-                                                     ]
-                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasBrainImagingWith ;
-                                                                              owl:someValuesFrom :Innotest
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasAβ42Score ;
-                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                   owl:onDatatype xsd:integer ;
-                                                                                                   owl:withRestrictions ( [ xsd:minExclusive 492
-                                                                                                                          ]
-                                                                                                                        )
-                                                                                                 ]
-                                                                            ]
-                                                                          ) ;
-                                                       rdf:type owl:Class
-                                                     ]
-                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasBrainImagingWith ;
-                                                                              owl:someValuesFrom :Lumipulse
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAβ42/40Score> ;
-                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                   owl:onDatatype xsd:decimal ;
-                                                                                                   owl:withRestrictions ( [ xsd:minExclusive 0.071
-                                                                                                                          ]
-                                                                                                                        )
-                                                                                                 ]
-                                                                            ]
-                                                                          ) ;
-                                                       rdf:type owl:Class
-                                                     ]
-                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasBrainImagingWith ;
-                                                                              owl:someValuesFrom :Lumipulse
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasAβ42Score ;
-                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                   owl:onDatatype xsd:integer ;
-                                                                                                   owl:withRestrictions ( [ xsd:minExclusive 714
-                                                                                                                          ]
-                                                                                                                        )
-                                                                                                 ]
-                                                                            ]
-                                                                          ) ;
-                                                       rdf:type owl:Class
-                                                     ]
-                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasBrainImagingWith ;
-                                                                              owl:someValuesFrom :PlasmaSimoa
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAβ42/40Score> ;
-                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                   owl:onDatatype xsd:decimal ;
-                                                                                                   owl:withRestrictions ( [ xsd:minExclusive 0.0472
-                                                                                                                          ]
-                                                                                                                        )
-                                                                                                 ]
-                                                                            ]
-                                                                          ) ;
-                                                       rdf:type owl:Class
-                                                     ]
-                                                   )
-                                     ] ;
                  rdfs:subClassOf :AmyloidTest ;
                  owl:disjointWith :AmyloidPositive .
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/AmyloidPositive
 :AmyloidPositive rdf:type owl:Class ;
-                 owl:equivalentClass [ rdf:type owl:Class ;
-                                       owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasBrainImagingWith ;
-                                                                              owl:someValuesFrom :Elecsys
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAβ42/40Score> ;
-                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                   owl:onDatatype xsd:decimal ;
-                                                                                                   owl:withRestrictions ( [ xsd:maxInclusive 0.091
-                                                                                                                          ]
-                                                                                                                        )
-                                                                                                 ]
-                                                                            ]
-                                                                          ) ;
-                                                       rdf:type owl:Class
-                                                     ]
-                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasBrainImagingWith ;
-                                                                              owl:someValuesFrom :Elecsys
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasAβ42Score ;
-                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                   owl:onDatatype xsd:integer ;
-                                                                                                   owl:withRestrictions ( [ xsd:maxInclusive 1089
-                                                                                                                          ]
-                                                                                                                        )
-                                                                                                 ]
-                                                                            ]
-                                                                          ) ;
-                                                       rdf:type owl:Class
-                                                     ]
-                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasBrainImagingWith ;
-                                                                              owl:someValuesFrom :Innotest
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasAβ42Score ;
-                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                   owl:onDatatype xsd:integer ;
-                                                                                                   owl:withRestrictions ( [ xsd:maxInclusive 492
-                                                                                                                          ]
-                                                                                                                        )
-                                                                                                 ]
-                                                                            ]
-                                                                          ) ;
-                                                       rdf:type owl:Class
-                                                     ]
-                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasBrainImagingWith ;
-                                                                              owl:someValuesFrom :Lumipulse
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAβ42/40Score> ;
-                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                   owl:onDatatype xsd:decimal ;
-                                                                                                   owl:withRestrictions ( [ xsd:maxInclusive 0.071
-                                                                                                                          ]
-                                                                                                                        )
-                                                                                                 ]
-                                                                            ]
-                                                                          ) ;
-                                                       rdf:type owl:Class
-                                                     ]
-                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasBrainImagingWith ;
-                                                                              owl:someValuesFrom :Lumipulse
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasAβ42Score ;
-                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                   owl:onDatatype xsd:integer ;
-                                                                                                   owl:withRestrictions ( [ xsd:maxInclusive 714
-                                                                                                                          ]
-                                                                                                                        )
-                                                                                                 ]
-                                                                            ]
-                                                                          ) ;
-                                                       rdf:type owl:Class
-                                                     ]
-                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty :hasBrainImagingWith ;
-                                                                              owl:someValuesFrom :PlasmaSimoa
-                                                                            ]
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAβ42/40Score> ;
-                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                   owl:onDatatype xsd:decimal ;
-                                                                                                   owl:withRestrictions ( [ xsd:maxInclusive 0.0472
-                                                                                                                          ]
-                                                                                                                        )
-                                                                                                 ]
-                                                                            ]
-                                                                          ) ;
-                                                       rdf:type owl:Class
-                                                     ]
-                                                   )
-                                     ] ;
                  rdfs:subClassOf :AmyloidTest .
 
 
@@ -501,26 +279,6 @@
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/AsymptomaticAD
 :AsymptomaticAD rdf:type owl:Class ;
-                owl:equivalentClass [ owl:intersectionOf ( :AlzheimersContinuumPerson
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty :hasClinicalTest ;
-                                                             owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                  owl:unionOf ( :TauNegative
-                                                                                                [ rdf:type owl:Restriction ;
-                                                                                                  owl:onProperty :hasMMSEScore ;
-                                                                                                  owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                       owl:onDatatype xsd:integer ;
-                                                                                                                       owl:withRestrictions ( [ xsd:minInclusive 26
-                                                                                                                                              ]
-                                                                                                                                            )
-                                                                                                                     ]
-                                                                                                ]
-                                                                                              )
-                                                                                ]
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
                 rdfs:subClassOf :AlzheimersContinuumPerson .
 
 
@@ -625,48 +383,11 @@
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/NeedBiomarkersTest
 :NeedBiomarkersTest rdf:type owl:Class ;
-                    owl:equivalentClass [ owl:intersectionOf ( :RecommendedAction
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty :hasChanged ;
-                                                                 owl:someValuesFrom :Behaviour
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty :hasMMSEScore ;
-                                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                      owl:onDatatype xsd:integer ;
-                                                                                      owl:withRestrictions ( [ xsd:maxInclusive 24
-                                                                                                             ]
-                                                                                                           )
-                                                                                    ]
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty :hasOtherDiseases ;
-                                                                 owl:someValuesFrom xsd:boolean
-                                                               ]
-                                                             ) ;
-                                          rdf:type owl:Class
-                                        ] ;
                     rdfs:subClassOf :RecommendedAction .
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/NeedStructuralImaging
 :NeedStructuralImaging rdf:type owl:Class ;
-                       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty :hasChanged ;
-                                                                    owl:someValuesFrom :Behaviour
-                                                                  ]
-                                                                  [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty :hasMMSEScore ;
-                                                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                         owl:onDatatype xsd:integer ;
-                                                                                         owl:withRestrictions ( [ xsd:maxInclusive 24
-                                                                                                                ]
-                                                                                                              )
-                                                                                       ]
-                                                                  ]
-                                                                ) ;
-                                             rdf:type owl:Class
-                                           ] ;
                        rdfs:subClassOf :RecommendedAction .
 
 
@@ -677,81 +398,11 @@
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/NeurodegenerationNegative
 :NeurodegenerationNegative rdf:type owl:Class ;
-                           owl:equivalentClass [ rdf:type owl:Class ;
-                                                 owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty :hasBrainImagingWith ;
-                                                                                        owl:someValuesFrom :Innotest
-                                                                                      ]
-                                                                                      [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty :hasT-Tau ;
-                                                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                             owl:onDatatype xsd:integer ;
-                                                                                                             owl:withRestrictions ( [ xsd:maxExclusive 355
-                                                                                                                                    ]
-                                                                                                                                  )
-                                                                                                           ]
-                                                                                      ]
-                                                                                    ) ;
-                                                                 rdf:type owl:Class
-                                                               ]
-                                                               [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty :hasBrainImagingWith ;
-                                                                                        owl:someValuesFrom :MRIFreesurfer
-                                                                                      ]
-                                                                                      [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty :hasAdjHippocampalVol ;
-                                                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                             owl:onDatatype xsd:decimal ;
-                                                                                                             owl:withRestrictions ( [ xsd:maxExclusive 2821.1
-                                                                                                                                    ]
-                                                                                                                                  )
-                                                                                                           ]
-                                                                                      ]
-                                                                                    ) ;
-                                                                 rdf:type owl:Class
-                                                               ]
-                                                             )
-                                               ] ;
                            rdfs:subClassOf :NeurodegenerationTest .
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/NeurodegenerationPositive
 :NeurodegenerationPositive rdf:type owl:Class ;
-                           owl:equivalentClass [ rdf:type owl:Class ;
-                                                 owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty :hasBrainImagingWith ;
-                                                                                        owl:someValuesFrom :Innotest
-                                                                                      ]
-                                                                                      [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty :hasT-Tau ;
-                                                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                             owl:onDatatype xsd:integer ;
-                                                                                                             owl:withRestrictions ( [ xsd:minInclusive 355
-                                                                                                                                    ]
-                                                                                                                                  )
-                                                                                                           ]
-                                                                                      ]
-                                                                                    ) ;
-                                                                 rdf:type owl:Class
-                                                               ]
-                                                               [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty :hasBrainImagingWith ;
-                                                                                        owl:someValuesFrom :MRIFreesurfer
-                                                                                      ]
-                                                                                      [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty :hasAdjHippocampalVol ;
-                                                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                             owl:onDatatype xsd:decimal ;
-                                                                                                             owl:withRestrictions ( [ xsd:minInclusive 2821.1
-                                                                                                                                    ]
-                                                                                                                                  )
-                                                                                                           ]
-                                                                                      ]
-                                                                                    ) ;
-                                                                 rdf:type owl:Class
-                                                               ]
-                                                             )
-                                               ] ;
                            rdfs:subClassOf :NeurodegenerationTest .
 
 
@@ -778,63 +429,8 @@
                                            ) .
 
 
-###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/OtherDiseases
-:OtherDiseases rdf:type owl:Class ;
-               rdfs:subClassOf :MedicalHistory .
-
-
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/PersonWithMCI
 :PersonWithMCI rdf:type owl:Class ;
-               owl:equivalentClass [ owl:intersectionOf ( :AlzheimersContinuumPerson
-                                                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                   owl:onProperty :hasClinicalTest ;
-                                                                                   owl:someValuesFrom :TauPositive
-                                                                                 ]
-                                                                                 [ rdf:type owl:Restriction ;
-                                                                                   owl:onProperty :hasClinicalTest ;
-                                                                                   owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                                        owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty :hasFAQScore ;
-                                                                                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                             owl:onDatatype xsd:integer ;
-                                                                                                                                             owl:withRestrictions ( [ xsd:minExclusive 9
-                                                                                                                                                                    ]
-                                                                                                                                                                  )
-                                                                                                                                           ]
-                                                                                                                      ]
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty :hasMMSEScore ;
-                                                                                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                             owl:onDatatype xsd:integer ;
-                                                                                                                                             owl:withRestrictions ( [ xsd:minInclusive 21
-                                                                                                                                                                    ]
-                                                                                                                                                                    [ xsd:maxInclusive 25
-                                                                                                                                                                    ]
-                                                                                                                                                                  )
-                                                                                                                                           ]
-                                                                                                                      ]
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty :hasMoCAScore ;
-                                                                                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                             owl:onDatatype xsd:integer ;
-                                                                                                                                             owl:withRestrictions ( [ xsd:maxExclusive 26
-                                                                                                                                                                    ]
-                                                                                                                                                                  )
-                                                                                                                                           ]
-                                                                                                                      ]
-                                                                                                                    )
-                                                                                                      ]
-                                                                                 ]
-                                                                               ) ;
-                                                            rdf:type owl:Class
-                                                          ]
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty :independent ;
-                                                            owl:someValuesFrom :InstrumentalActivitiesOfDailyLiving
-                                                          ]
-                                                        ) ;
-                                     rdf:type owl:Class
-                                   ] ;
                rdfs:subClassOf :AlzheimersContinuumPerson .
 
 
@@ -895,114 +491,12 @@
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/TauNegative
 :TauNegative rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :hasBrainImagingWith ;
-                                                                          owl:someValuesFrom :Elecsys
-                                                                        ]
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasP-Tau/Aβ42Score> ;
-                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                               owl:onDatatype xsd:decimal ;
-                                                                                               owl:withRestrictions ( [ xsd:maxExclusive 0.02
-                                                                                                                      ]
-                                                                                                                    )
-                                                                                             ]
-                                                                        ]
-                                                                      ) ;
-                                                   rdf:type owl:Class
-                                                 ]
-                                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :hasBrainImagingWith ;
-                                                                          owl:someValuesFrom :Innotest
-                                                                        ]
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :hasP-Tau181Score ;
-                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                               owl:onDatatype xsd:integer ;
-                                                                                               owl:withRestrictions ( [ xsd:maxInclusive 44
-                                                                                                                      ]
-                                                                                                                    )
-                                                                                             ]
-                                                                        ]
-                                                                      ) ;
-                                                   rdf:type owl:Class
-                                                 ]
-                                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :hasBrainImagingWith ;
-                                                                          owl:someValuesFrom :Lumipulse
-                                                                        ]
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasP-Tau/Aβ42Score> ;
-                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                               owl:onDatatype xsd:decimal ;
-                                                                                               owl:withRestrictions ( [ xsd:maxExclusive 0.072
-                                                                                                                      ]
-                                                                                                                    )
-                                                                                             ]
-                                                                        ]
-                                                                      ) ;
-                                                   rdf:type owl:Class
-                                                 ]
-                                               )
-                                 ] ;
              rdfs:subClassOf :TauTest ;
              owl:disjointWith :TauPositive .
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/TauPositive
 :TauPositive rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :hasBrainImagingWith ;
-                                                                          owl:someValuesFrom :Elecsys
-                                                                        ]
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasP-Tau/Aβ42Score> ;
-                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                               owl:onDatatype xsd:decimal ;
-                                                                                               owl:withRestrictions ( [ xsd:minInclusive 0.02
-                                                                                                                      ]
-                                                                                                                    )
-                                                                                             ]
-                                                                        ]
-                                                                      ) ;
-                                                   rdf:type owl:Class
-                                                 ]
-                                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :hasBrainImagingWith ;
-                                                                          owl:someValuesFrom :Innotest
-                                                                        ]
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :hasP-Tau181Score ;
-                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                               owl:onDatatype xsd:integer ;
-                                                                                               owl:withRestrictions ( [ xsd:minExclusive 44
-                                                                                                                      ]
-                                                                                                                    )
-                                                                                             ]
-                                                                        ]
-                                                                      ) ;
-                                                   rdf:type owl:Class
-                                                 ]
-                                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :hasBrainImagingWith ;
-                                                                          owl:someValuesFrom :Lumipulse
-                                                                        ]
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasP-Tau/Aβ42Score> ;
-                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                               owl:onDatatype xsd:decimal ;
-                                                                                               owl:withRestrictions ( [ xsd:minInclusive 0.072
-                                                                                                                      ]
-                                                                                                                    )
-                                                                                             ]
-                                                                        ]
-                                                                      ) ;
-                                                   rdf:type owl:Class
-                                                 ]
-                                               )
-                                 ] ;
              rdfs:subClassOf :TauTest .
 
 
@@ -1065,25 +559,6 @@
 
 ###  https://w3id.org/sbeo#PersonWithADDementia
 <https://w3id.org/sbeo#PersonWithADDementia> rdf:type owl:Class ;
-                                             owl:equivalentClass [ owl:intersectionOf ( :AlzheimersContinuumPerson
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty :hasClinicalTest ;
-                                                                                          owl:someValuesFrom :NeurodegenerationPositive
-                                                                                        ]
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty :hasClinicalTest ;
-                                                                                          owl:someValuesFrom :TauPositive
-                                                                                        ]
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty :hasClinicalTest ;
-                                                                                          owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                                                               owl:onProperty :notIndependent ;
-                                                                                                               owl:someValuesFrom :InstrumentalActivitiesOfDailyLiving
-                                                                                                             ]
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
                                              rdfs:subClassOf :AlzheimersContinuumPerson .
 
 
@@ -1211,8 +686,7 @@
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/Stroke
-:Stroke rdf:type owl:NamedIndividual ,
-                 :OtherDiseases .
+:Stroke rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/TactileStimulation
@@ -1337,6 +811,24 @@
 
 :act rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
+:t rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:mmse rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:test1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:test2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:iadl rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:score rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:beh rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:val rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:vol rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
 :x rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :p1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
@@ -1345,7 +837,7 @@
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "" ;
-   rdfs:label "S2" ;
+   rdfs:label "MildActivities" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1372,7 +864,7 @@
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "" ;
-   rdfs:label "S4" ;
+   rdfs:label "ModerateActivities" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1399,7 +891,7 @@
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "" ;
-   rdfs:label "S5" ;
+   rdfs:label "SevereActivities" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1426,7 +918,1148 @@
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "" ;
-   rdfs:label "S1" ;
+   rdfs:label "AsymptomaticAD" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AlzheimersContinuumPerson ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasClinicalTest ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :TauNegative ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMMSEScore ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :mmse
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first :mmse ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 26 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AsymptomaticAD ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "PersonWithMCI" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AlzheimersContinuumPerson ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasClinicalTest ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :TauPositive ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMMSEScore ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :mmse
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first :mmse ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 21 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first :mmse ;
+                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first 25 ;
+                                                                                                                                                                      rdf:rest rdf:nil
+                                                                                                                                                                    ]
+                                                                                                                                                         ]
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> :independent ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :act
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :PersonWithMCI ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "PersonWithADDementia" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AlzheimersContinuumPerson ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasClinicalTest ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :TauPositive ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :notIndependent ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :act
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/sbeo#PersonWithADDementia> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "PersonWithNonADDementia" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://xmlns.com/foaf/0.1/Person> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasClinicalTest ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :test1
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :AmyloidNegative ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :test1
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasClinicalTest ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :test2
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :NeurodegenerationPositive ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :test2
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :notIndependent ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :iadl
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> :InstrumentalActivitiesOfDailyLiving ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :iadl
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.demcare.eu/ontologies/demlab.owl#PersonWithNonADDementia> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AlzheimersContinuumPerson" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://xmlns.com/foaf/0.1/Person> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasClinicalTest ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :AmyloidPositive ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AlzheimersContinuumPerson ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "NeedBiomarkersTest" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://xmlns.com/foaf/0.1/Person> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMMSEScore ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first :score ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 24 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasChanged ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :beh
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :Behaviour ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :beh
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :NeedBiomarkersTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "NeedStructuralImaging" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://xmlns.com/foaf/0.1/Person> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMMSEScore ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first :score ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 24 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasChanged ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :beh
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :Behaviour ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :beh
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :NeedStructuralImaging ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AmyloidNegative_Elecsys" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Elecsys
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAβ42/40Score> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :score ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 0.091 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AmyloidNegative ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AmyloidPositive_Elecsys" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Elecsys
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAβ42/40Score> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :score ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 0.091 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AmyloidPositive ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "TauPositive_Elecsys" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Elecsys
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasP-Tau/Aβ42Score> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :score ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 0.02 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :TauPositive ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "TauNegative_Elecsys" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Elecsys
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasP-Tau/Aβ42Score> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :score ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 0.02 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :TauNegative ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AmyloidNegative_Elecsys" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Elecsys
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasAβ42Score ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :score ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 1089 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AmyloidNegative ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AmyloidPositive_Elecsys" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Elecsys
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasAβ42Score ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :score ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 1089 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AmyloidPositive ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AmyloidNegative_Innotest" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Innotest
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasAβ42Score ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :score ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 492 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AmyloidNegative ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AmyloidPositive_Innotest" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Innotest
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasAβ42Score ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :score ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 492 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AmyloidPositive ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "TauNegative_Innotest" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Innotest
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasT-Tau ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :score ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 355 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :TauNegative ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "NeurodegenerationPositive_Innotest" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Innotest
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasT-Tau ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :val
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :val ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 355 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :NeurodegenerationPositive ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "NeurodegenerationNegative_Innotest" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Innotest
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasT-Tau ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :val
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :val ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 355 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :NeurodegenerationNegative ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AmyloidNegative_Lumipulse" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Lumipulse
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasAβ42Score ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :score ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 714 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AmyloidNegative ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "TauPositive_Lumipulse" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Lumipulse
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasP-Tau181Score ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :score ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 44 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :TauPositive ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "TauNegative_Lumipulse" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :Lumipulse
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasP-Tau181Score ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :score ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 44 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :TauNegative ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "NeurodegenerationNegative_MRIFreesurfer" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :MRIFreesurfer
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasAdjHippocampalVol ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :vol
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :vol ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 2821.1 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :NeurodegenerationNegative ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "NeurodegenerationPositive_MRIFreesurfer" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :MRIFreesurfer
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasAdjHippocampalVol ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :vol
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :vol ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 2821.1 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :NeurodegenerationPositive ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AmyloidNegative_PlasmaSimoa" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ClinicalTest ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasBrainImagingWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :PlasmaSimoa
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system#hasAβ42/40Score> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :score
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :score ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 0.0472 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AmyloidNegative ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "NeedToCheckAgainInTheNext6Months" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -1446,7 +2079,7 @@
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "" ;
-   rdfs:label "S3" ;
+   rdfs:label "PersonWithHighRiskAD" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;

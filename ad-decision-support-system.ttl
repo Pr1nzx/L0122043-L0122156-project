@@ -46,6 +46,11 @@
                             owl:AsymmetricProperty .
 
 
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasFollowUpPeriod
+:hasFollowUpPeriod rdf:type owl:ObjectProperty ;
+                   rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
+
+
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasHipotiroid
 :hasHipotiroid rdf:type owl:ObjectProperty ,
                         owl:AsymmetricProperty .
@@ -54,6 +59,18 @@
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasRecommendation
 :hasRecommendation rdf:type owl:ObjectProperty ,
                             owl:AsymmetricProperty .
+
+
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasRecommendedAction
+:hasRecommendedAction rdf:type owl:ObjectProperty ;
+                      rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                      rdfs:range :RecommendedAction .
+
+
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasRequiredTest
+:hasRequiredTest rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                 rdfs:range :RequiredTest .
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/hasRuleOutDiseases
@@ -169,7 +186,8 @@
 
 ###  http://semanticscience.org/resource/SIO_001213
 <http://semanticscience.org/resource/SIO_001213> rdf:type owl:Class ;
-                                                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                 owl:equivalentClass :MildStage ,
+                                                                     [ rdf:type owl:Restriction ;
                                                                        owl:onProperty :hasMMSEScore ;
                                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
                                                                                             owl:onDatatype xsd:integer ;
@@ -190,7 +208,8 @@
 
 ###  http://semanticscience.org/resource/SIO_001214
 <http://semanticscience.org/resource/SIO_001214> rdf:type owl:Class ;
-                                                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                 owl:equivalentClass :ModerateStage ,
+                                                                     [ rdf:type owl:Restriction ;
                                                                        owl:onProperty :hasMMSEScore ;
                                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
                                                                                             owl:onDatatype xsd:integer ;
@@ -211,7 +230,8 @@
 
 ###  http://semanticscience.org/resource/SIO_001215
 <http://semanticscience.org/resource/SIO_001215> rdf:type owl:Class ;
-                                                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                 owl:equivalentClass :SevereStage ,
+                                                                     [ rdf:type owl:Restriction ;
                                                                        owl:onProperty :hasMMSEScore ;
                                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
                                                                                             owl:onDatatype xsd:integer ;
@@ -365,6 +385,10 @@
                 rdfs:subClassOf :RecommendedActivities .
 
 
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/MildStage
+:MildStage rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/MoCA
 :MoCA rdf:type owl:Class ;
       rdfs:subClassOf :Cognitive .
@@ -379,6 +403,10 @@
                                                     )
                                         ] ;
                     rdfs:subClassOf :RecommendedActivities .
+
+
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/ModerateStage
+:ModerateStage rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/NeedBiomarkersTest
@@ -449,6 +477,10 @@
                        rdfs:subClassOf :ClinicalTest .
 
 
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/RequiredTest
+:RequiredTest rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/SevereActivities
 :SevereActivities rdf:type owl:Class ;
                   owl:equivalentClass [ rdf:type owl:Class ;
@@ -459,6 +491,10 @@
                                                   )
                                       ] ;
                   rdfs:subClassOf :RecommendedActivities .
+
+
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/SevereStage
+:SevereStage rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/SubjectiveCognitiveDecline
@@ -571,6 +607,11 @@
                              :RecommendedActivities .
 
 
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/AnnualCognitiveAssessment
+:AnnualCognitiveAssessment rdf:type owl:NamedIndividual ,
+                                    :RequiredTest .
+
+
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/ArtActivity
 :ArtActivity rdf:type owl:NamedIndividual ,
                       :RecommendedActivities .
@@ -581,9 +622,24 @@
                               :RecommendedActivities .
 
 
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/BasicMetabolicPanel
+:BasicMetabolicPanel rdf:type owl:NamedIndividual ,
+                              :RequiredTest .
+
+
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/BehavioralManagement
+:BehavioralManagement rdf:type owl:NamedIndividual ,
+                               :RecommendedAction .
+
+
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/Behaviour
 :Behaviour rdf:type owl:NamedIndividual ,
                     :Behaviour .
+
+
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/BrainMRIWithHippocampalVolumetry
+:BrainMRIWithHippocampalVolumetry rdf:type owl:NamedIndividual ,
+                                           :RequiredTest .
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/Budi
@@ -606,6 +662,16 @@
                   :hasMMSEScore 5 ;
                   :hasOtherDiseases "false"^^xsd:boolean ;
                   :hasT-Tau 400 .
+
+
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/CaregiverSupport
+:CaregiverSupport rdf:type owl:NamedIndividual ,
+                           :RecommendedAction .
+
+
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/CognitiveRehabilitationTherapy
+:CognitiveRehabilitationTherapy rdf:type owl:NamedIndividual ,
+                                         :RecommendedAction .
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/ComplexIADL
@@ -665,9 +731,19 @@
                           :RecommendedActivities .
 
 
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/NeurologistReferral
+:NeurologistReferral rdf:type owl:NamedIndividual ,
+                              :RecommendedAction .
+
+
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/OlfactoryStimulation
 :OlfactoryStimulation rdf:type owl:NamedIndividual ,
                                :RecommendedActivities .
+
+
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/PharmacologicalTreatment
+:PharmacologicalTreatment rdf:type owl:NamedIndividual ,
+                                   :RecommendedAction .
 
 
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/Physical
@@ -685,6 +761,10 @@
                        :RecommendedActivities .
 
 
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/SixMonthFollowUp
+:SixMonthFollowUp rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/Stroke
 :Stroke rdf:type owl:NamedIndividual .
 
@@ -694,9 +774,27 @@
                              :RecommendedActivities .
 
 
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/ThreeMonthFollowUp
+:ThreeMonthFollowUp rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/ThyroidFunctionTest
+:ThyroidFunctionTest rdf:type owl:NamedIndividual ,
+                              :RequiredTest .
+
+
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/TwelveMonthFollowUp
+:TwelveMonthFollowUp rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/VisualStimulation
 :VisualStimulation rdf:type owl:NamedIndividual ,
                             :RecommendedActivities .
+
+
+###  http://www.semanticweb.org/cahyaw06/ontologies/2025/10/ad-decision-support-system/VitaminB12AndFolateTest
+:VitaminB12AndFolateTest rdf:type owl:NamedIndividual ,
+                                  :RequiredTest .
 
 
 #################################################################
@@ -2059,6 +2157,96 @@
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "" ;
+   rdfs:label "S5" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :MildStage ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasFollowUpPeriod ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :TwelveMonthFollowUp
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S4" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ModerateStage ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasFollowUpPeriod ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :SixMonthFollowUp
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S2" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/sbeo#PersonWithADDementia> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :ModerateStage ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRecommendedAction ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :CognitiveRehabilitationTherapy
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SevereStage ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasFollowUpPeriod ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :ThreeMonthFollowUp
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
    rdfs:label "NeedToCheckAgainInTheNext6Months" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
@@ -2110,4 +2298,67 @@
                                          ]
  ] .
 
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/sbeo#PersonWithADDementia> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRecommendedAction ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :NeurologistReferral
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+
+# --- 1. Definisi Class Tambahan ---
+:MildStage rdf:type owl:Class ;
+           owl:equivalentClass <http://semanticscience.org/resource/SIO_001213> .
+
+:ModerateStage rdf:type owl:Class ;
+               owl:equivalentClass <http://semanticscience.org/resource/SIO_001214> .
+
+:SevereStage rdf:type owl:Class ;
+             owl:equivalentClass <http://semanticscience.org/resource/SIO_001215> .
+
+:RequiredTest rdf:type owl:Class .
+:RecommendedAction rdf:type owl:Class .
+
+# --- 2. Properti Baru ---
+:hasRecommendedAction rdf:type owl:ObjectProperty ;
+                      rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                      rdfs:range :RecommendedAction .
+
+:hasRequiredTest rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                 rdfs:range :RequiredTest .
+
+:hasFollowUpPeriod rdf:type owl:ObjectProperty ;
+                   rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
+
+# --- 3. Individuals (Pilihan Jawaban) ---
+:NeurologistReferral rdf:type owl:NamedIndividual , :RecommendedAction .
+:PharmacologicalTreatment rdf:type owl:NamedIndividual , :RecommendedAction .
+:CaregiverSupport rdf:type owl:NamedIndividual , :RecommendedAction .
+:CognitiveRehabilitationTherapy rdf:type owl:NamedIndividual , :RecommendedAction .
+:BehavioralManagement rdf:type owl:NamedIndividual , :RecommendedAction .
+
+:AnnualCognitiveAssessment rdf:type owl:NamedIndividual , :RequiredTest .
+:BasicMetabolicPanel rdf:type owl:NamedIndividual , :RequiredTest .
+:ThyroidFunctionTest rdf:type owl:NamedIndividual , :RequiredTest .
+:VitaminB12AndFolateTest rdf:type owl:NamedIndividual , :RequiredTest .
+:BrainMRIWithHippocampalVolumetry rdf:type owl:NamedIndividual , :RequiredTest .
+
+:ThreeMonthFollowUp rdf:type owl:NamedIndividual .
+:SixMonthFollowUp rdf:type owl:NamedIndividual .
+:TwelveMonthFollowUp rdf:type owl:NamedIndividual .
